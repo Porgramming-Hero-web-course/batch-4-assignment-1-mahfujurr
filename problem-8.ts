@@ -1,9 +1,10 @@
 {
-    const person = { name: "Alice", age: 25, email: "alice@example.com" };
+    type Person = { name: string, age: number, email: string };
+    const person: Person = { name: "Alice", age: 25, email: "alice@example.com" };
 
-    const validateKeys = <X, Y extends keyof X>(obj: X, prop: Y): X[Y] => {
+    const validateKeys = <T>(obj: T, keys: (keyof T)[]): boolean => {
 
-        return obj[prop];
+        return keys.every((key) => key in obj);
     };
 
     console.log(validateKeys(person, ["name", "age"]));
