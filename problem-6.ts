@@ -11,4 +11,4 @@ const updateProfile = (myProfile: Profile, changes: Partial<Profile>): Profile =
     return { ...myProfile, ...changes };
 };
 
-// console.log(updateProfile(myProfile, { age: 26 }));
+console.log(updateProfile(myProfile, { age: 26 }));

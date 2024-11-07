@@ -5,4 +5,4 @@ const removeDuplicates = (array: number[]): number[] => {
 };
 
 
-// console.log(removeDuplicates([1,1,2,3,9,2,10])); 
+console.log(removeDuplicates([1,1,2,3,9,2,10])); 
